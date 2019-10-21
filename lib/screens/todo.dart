@@ -3,7 +3,6 @@ import '../classes/profile.dart';
 import 'dart:ui' as ui;
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-// import '../widgets/list.dart';
 
 Future<Profile> fetch() async {
   print("Fetching Data");
@@ -28,7 +27,6 @@ class _Home extends State<Home> {
 
   @override
   void initState() {
-    print("ok");
     super.initState();
     profile = fetch();
   }
@@ -44,7 +42,7 @@ class _Home extends State<Home> {
     final _width = MediaQuery.of(context).size.width;
     final _height = MediaQuery.of(context).size.height;
     return new MaterialApp(
-      title: "Todo",
+      title: "Basic Fetch Data from APIs",
       home: Scaffold(
         appBar: AppBar(
           title: Text("Hello")
@@ -87,39 +85,3 @@ class _Home extends State<Home> {
     );
   }
 }
-
-/* 
-class Home extends StatelessWidget {
-  bool isClick = false;
-  void handleClick() {
-    this.isClick = !this.isClick;
-    print(this.isClick);
-  }
-  @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: "Todo",
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Hello")
-        ),
-        body: Container(
-          alignment: Alignment(0.0, 0.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                "Love Kloy",
-                style: TextStyle(fontSize: 20),
-                ),
-              IconButton(
-                
-              )
-            ],
-          )
-        ),
-      ),
-    );
-  }
-} */
