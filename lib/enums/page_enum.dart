@@ -1,0 +1,1 @@
+enum PageEnum { Home, Login }
